@@ -1,0 +1,16 @@
+#Program to search the frequency of oocurance of a word in an input file.
+file = input("Enter file name: ")
+word = input("Enter word to be searched:")
+count = 0
+
+with open(file, 'r') as f:
+    for line in f:
+        words = line.split()
+        for i in words:
+            if (i == word):
+                count = count + 1
+if (count>0):
+    print("Occurrences of the word:")
+    print(count)
+else:
+    print("word not present in input file")
